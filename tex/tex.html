@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+  </head>
+  <body>
+    <input type="text" id="tbox">
+    <button onclick="cl()">button</button>
+  <div id="canvas-box">
+    <div id="text"></div>
+  </div>
+  <input type="text" id="message"/>
+  <input type="button" id="send" value="おしてみーな" />
+  <div id="example"></div>
+  </body>
+  <script>
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './text./exam2.txt', true);
+
+    xhr.onreadystatechange = function(){
+        if((xhr.readyState == 4) && (xhr.status == 200)){
+          console.log("iine");
+        var data_list = xhr.responseText.split("\n");
+        var output = '';
+        
+            for(let i=0;i<data_list.length;i++){
+                output += '<div>' + data_list[i] + '</div>';
+            }
+        
+        document.getElementById('example').insertAdjacentHTML('afterbegin', '<div>' + output + '</div>');
+        }
+    }
+
+    xhr.send(null);
+
+    function cl(e){
+      /*let tbox=document.getElementById("tbox");
+      let text1=document.getElementById("text");
+      var ko=tbox.value;
+      text1.innerHTML=ko;
+      var ajax = new XMLHttpRequest();
+ 
+      ajax.open("post", "./exam.txt");
+      ajax.send("初音ミク"); // 通信させます。
+      ajax.addEventListener("load", function(){ // loadイベントを登録します。
+        console.log(this.response); // 通信結果を出力します。
+      }, false);*/
+
+      
+      }
+    $(function(){
+      $('#send').on('click', function(e){
+        e.preventDefault();
+        $.ajax('upload.php',
+        {
+        		type: 'post',
+            	data: {message: $('#message').val()},
+            	dataType: 'xml'
+            }).done(function(data){
+                alert('成功');
+                //console.log("できたよ");
+            }).fail(function(msg, XMLHttpRequest, textStatus, errorThrown){
+                alert("ひょっひょっひょ");
+                console.log(XMLHttpRequest.status);
+                console.log(textStatus);
+                console.log(errorThrown);
+            });
+        });
+      });
+  </script>
+</html>
