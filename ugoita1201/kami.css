@@ -1,0 +1,243 @@
+#humMenu {
+  z-index: 20;
+  padding: 1%;
+  background: grey;
+  height: 6vh;
+  left: 0vh;
+}
+ 
+#humCheck, #humClose { display:none; }
+#humOpen {
+  position: relative;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+#humOpen:hover {
+  opacity: 0.5;
+}
+#humOpen img { display: block; }
+#humClose, nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+#humClose {
+  z-index: 2;
+  width: 100%;
+  background: wheat;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+nav {
+  z-index: 3;
+  width: 50%;
+  background: grey;
+  transition: 0.5s;
+  transform: translateX(-100%);
+}
+#humCheck:checked ~ #humClose { display: block; }
+#humCheck:checked ~ nav {
+  transform: translateX(0);
+}
+/*
+nav ul{
+overflow: hidden;
+list-style: none;
+}
+nav li{
+  padding: 15px 0;
+  margin: 10px 0;
+}
+nav li:hover{
+  opacity: 0.5;
+}
+nav li a{
+  font-size: 20px;
+  text-decoration: none;
+  font-size: 20px;
+  
+}*/
+.nice-textbox{
+  position: static;
+  display: block;
+  width: 80%;
+  /*margin-top: 10px;
+  margin-left: 10px;*/
+  padding: 15px;
+  
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  color: whitesmoke;
+  outline: none;
+  background-color: black;
+  margin: auto;
+}
+.btn--orange,
+a.btn--orange {
+  width: 150px;
+    padding: 10px;
+  color: #fff;
+ 
+  cursor:pointer;
+    display: inline-block;
+    text-decoration: none;
+    background: magenta;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    
+  }
+  
+
+.btn--orange:hover,.btn--2:hover,.btn--3:hover,.Rayquaza:hover,
+a.btn--orange:hover {
+  color: #fff;
+  background: black;
+}
+a.btn--circle {
+  border-radius: 50%;
+  line-height: 100px;
+  width: 100px;
+  height: 100px;
+  padding: 0;
+  -webkit-box-shadow: 0 5px 0 #e6d900;
+  box-shadow: 0 5px 0 #e6d900;
+}
+
+a.btn--circle:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+  -webkit-box-shadow: 0 2px 0 #e6d900;
+  box-shadow: 0 2px 0 #e6d900;
+}
+.btn--2{
+  width: 150px;
+    padding: 10px;
+  color: #fff;
+ 
+  cursor:pointer;
+    display: inline-block;
+    text-decoration: none;
+    background: cyan;
+    color: #FFF;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+}
+.btn--orange:active,.btn--2:active,.btn--3:active,.Rayquaza:active,
+a.btn--orange:active {
+  color: black;
+  background: white;
+}
+
+/*#message {
+  position: fixed;
+  z-index: 100;
+  left: 5%;
+  bottom: 30px;
+  width: 90%;
+  padding: 5%;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0,0,0,.8);
+  border-radius: 20px;
+  border: 3px solid #fff;
+  display: none;
+}*/
+.aaaaa{
+  margin-top: 10px;
+  
+  
+}
+.btn--3{
+  width: 150px;
+    padding: 10px;
+  color: #fff;
+  opacity: 100;
+
+    display: inline-block;
+    text-decoration: none;
+    background: gold;
+    color: #FFF;
+    width: 38%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    overflow: hidden;
+    transition: .4s;
+    
+}
+
+input:focus{
+	opacity:100;
+}
+/*.Dracozolt{
+  z-index: 1000;
+}*/
+.Ho-Oh{
+  
+	text-align: center;
+}
+
+label.btn--3 {
+  overflow: hidden;
+    transition: .4s;
+  margin-left: 10px;
+  color: #AAAAAA; /* ラベルテキストの色を指定する */
+  font-size: 12px; /* ラベルテキストのサイズを指定する */
+  background-color: black;/* ラベルの背景色を指定する */
+  padding: 8px; /* ラベルとテキスト間の余白を指定する */
+  border-radius: 10px; /* ラベルボックスの角丸を指定する */
+  cursor:pointer; /* マウスカーソルの形を指定する */
+  display : block ; /* aタグの場合は必要 */
+  text-decoration : none ; /* aタグでリンクテキストの下線を消したい場合は必要 */
+  outline : 2px solid black; /* 線の太さ・線状・色 */
+  outline-offset : -1px; /* どれだけ内側に線を表示したいかを負の値で指定 */
+  
+  margin: auto;
+
+}
+
+label > input{
+  display:none; /* アップロードボタンのスタイルを無効にする */
+}
+
+/*.Calyrex{
+  cursor:pointer;
+}*/
+.Rayquaza{
+  width: 150px;
+  padding: 10px;
+color: #fff;
+margin: auto;
+cursor:pointer;
+  display: inline-block;
+  text-decoration: none;
+  background: magenta;
+  color: #FFF;
+  width: 100px;
+  height: 50px;
+  line-height: 8px;
+  border-radius: 28%;
+  text-align: center;
+  overflow: hidden;
+  transition: .4s;
+  
+}
+
+.Embedded_Tower{
+  text-align: center;
+}
