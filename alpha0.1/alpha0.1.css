@@ -304,6 +304,6 @@ cursor:pointer;
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
   .btn--3{
-    max-width: 60px;
+    max-width: 110px;
   }
 }
