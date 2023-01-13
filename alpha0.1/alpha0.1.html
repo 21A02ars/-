@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <title>Light That Burns The Sky</title>
+  <link rel="stylesheet" href="alpha0.1.css">
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+        
+  
+</head>
+<a-camera gps-camera rotation-reader> </a-camera>
+  <div id="humMenu" style="position: fixed; top: 0px">
+    <input id="humCheck" type="checkbox">
+    <label id="humOpen" for="humCheck"><img src="bars_24.png" alt="メニュー" width="34" height="28"></label>
+    <label id="humClose" for="humCheck"></label>
+    <nav>
+      <!--<div class="Calyrex">
+        <div class="aaaaa">
+          <input type="text" id="tbox" class="nice-textbox" placeholder="文字を入力">
+        </div>-->
+        <!--
+        <div class="Ho-Oh">-->
+          <!--<input type="button" id="b1">-->
+          <!--<button class="btn--orange" onclick="ano()">OUT</button>
+          <button id="run" class="btn--2" onclick="run()">IN</button>
+        </div>
+      </div>-->
+
+      <div class="Calyrex" id="gps_now"></div>
+
+      <form name="myForm" action="uploader.php" method="post" enctype="multipart/form-data">
+        
+        <p>
+          <!--<input class="btn--3" type="file" name="upfile" id="upfile" accept="image/*"/>-->
+          <span style="color: #ff0000;" data-mce-style="color: #ff0000;"><div><img id="thumbnail" src=""></div></span>
+        </p>
+        
+        <!--<label class="btn--3" for="upfile">
+            写真を選択
+        <input type="file" id="upfile" name="upfile" accept="image/*">
+        </label>-->
+      
+        
+        <div class="Ho-Oh2">
+        <label class="btn--3" for="upfile">
+            写真を選択
+        <input type="file" id="upfile" name="upfile" accept="image/*">
+        </label>
+
+        <p><input type="submit" name="save" value="保存" class="Meowscarada"/>
+
+        </p>
+      
+        </div>
+    </form>
+
+    
+    <div class="Embedded_Tower">
+      <button class="Rayquaza" onclick="Rayquaza()">写真を消す</button>
+    </div>
+    
+  </nav>
+  </div>
+
+
+<body style="margin: 0; overflow:hidden;">
+    <a-scene id="box"
+        vr-mode-ui="enabled: false"
+        embedded
+        arjs="sourceType: webcam; debugUIEnabled: false;">
+
+        <a-entity id="nihon" class="Dracozo" mb-text position="0 1.4 -1.4" data-text=""></a-entity>
+        <a-entity  class="Dracozolt" mb-text2 position="0.2 1.4 -2" scale="0.4 0.4 0.4" data-text=""></a-entity>
+        <a-entity id="nihon0" class="Dracozolt" mb-text position="0 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon1" class="Dracozolt1" mb-text position="1.7 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon2" class="Dracozolt2" mb-text position="3.4 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon3" class="Dracozolt3" mb-text position="5.1 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon4" class="Dracozolt4" mb-text position="6.8 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon5" class="Dracozolt5" mb-text position="8.5 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon6" class="Dracozolt6" mb-text position="10.2 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon7" class="Dracozolt7" mb-text position="11.9 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon8" class="Dracozolt8" mb-text position="13.6 1.4 -2.4" data-text=""></a-entity>
+        <a-entity id="nihon9" class="Dracozolt9" mb-text position="15.3 1.4 -2.4" data-text=""></a-entity>
+
+        <a-entity id="nihon0_1" class="Dracozolt_1" mb-text position="1 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon1_1" class="Dracozolt1_1" mb-text position="2 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon2_1" class="Dracozolt2_1" mb-text position="3 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon3_1" class="Dracozolt3_1" mb-text position="4 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon4_1" class="Dracozolt4_1" mb-text position="5 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon5_1" class="Dracozolt5_1" mb-text position="6 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon6_1" class="Dracozolt6_1" mb-text position="7 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon7_1" class="Dracozolt7_1" mb-text position="8 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon8_1" class="Dracozolt8_1" mb-text position="9 1.0 -1.4" data-text=""></a-entity>
+        <a-entity id="nihon9_1" class="Dracozolt9_1" mb-text position="10 1.0 -1.4" data-text=""></a-entity>
+        
+    </a-scene>
+</body>
+    <script>
+        /*var xhr = new XMLHttpRequest();
+        xhr.open('GET', './text/exam2.txt', true);
+        xhr.send(null);*/
+        /*$('#save').change(function(e){
+            if (this.files.length > 0) {
+            console.log("iruyo");
+
+            e.preventDefault();
+            
+            // 選択されたファイル情報を取得
+            var file = this.files[0];
+            
+            // readerのresultプロパティに、データURLとしてエンコードされたファイルデータを格納
+            var image =new Image();
+            var reader = new FileReader();
+            
+            reader.readAsDataURL(file);
+
+            
+            
+            reader.onload = function() {
+                $('#kyu').attr('src', reader.result );
+                image.src=reader.result;
+                image.onload=function(){
+                document.querySelectorAll('[mb-text2]').forEach(mb_text2=>{
+                mb_text2.innerHTML=`<a-image id="Jirachi" scale="${(image.naturalWidth)/image.naturalHeight} 1 1" src="${reader.result}"></a-image>`
+                })
+                }
+                $.ajax('upload.php',
+                {
+                    type: 'post',
+                    //data: {message: `<a-image id="Jirachi" scale="${(image.naturalWidth)/image.naturalHeight} 1 1" src="./upload/${uniq_file}"></a-image>`,
+                    //uniq_file_name:`${uniq_file}`},
+                    dataType: 'xml'
+                }).done(function(data){
+                    console.log("できたよ");
+                }).fail(function(msg, XMLHttpRequest, textStatus, errorThrown){
+                    console.log(XMLHttpRequest.status);
+                    console.log(textStatus);
+                    console.log(errorThrown);
+                });
+            }
+            }
+        });*/
+
+
+        /*$('#upfile').change(function(e){
+            if (this.files.length > 0) {
+            console.log("iruyo");
+
+            e.preventDefault();
+            
+            // 選択されたファイル情報を取得
+            var file = this.files[0];
+            
+            // readerのresultプロパティに、データURLとしてエンコードされたファイルデータを格納
+            var image =new Image();
+            var reader = new FileReader();
+            
+            reader.readAsDataURL(file);
+            
+            reader.onload = function() {
+                $('#kyu').attr('src', reader.result );
+                console.log(reader.result);
+                image.src=reader.result;
+                console.log(image);
+                image.onload=function(){
+                document.querySelectorAll('[mb-text2]').forEach(mb_text2=>{
+                    //console.log((image.naturalWidth)/image.naturalHeight+"++");
+                    var height=image.naturalHeight;
+                    var width=image.naturalWidth;
+                    var ratio=width/height;
+                    mb_text2.innerHTML=`<a-image id="Jirachi" scale="${ratio} 1 " src="${reader.result}"></a-image>`
+                //mb_text2.innerHTML=`<a-image id="Jirachi" scale="${(image.naturalWidth)/image.naturalHeight} 1 " src="${reader.result}"></a-image>`
+                    console.log(mb_text2);
+                })
+                }
+            }
+            }
+        });*/
+        
+
+        function posi(i){
+            return 1.7*i;
+        }
+        </script>
+    <script src="alpha0.1.js"></script>
+                
+</body>
+</html>
