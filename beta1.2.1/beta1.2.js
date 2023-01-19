@@ -223,10 +223,11 @@ let hako=[];
 
         var Iono4=Math.sqrt((Miriam ** 2) + (Miriam2 ** 2));    
 
-        if(Iono4<=Iono3){
+        ///////制限距離なし
+        //if(Iono4<=Iono3){
           hako[r]=m;
           r+=1;
-        }
+        //}
           
         }
         resolve(hako);
